@@ -1,0 +1,39 @@
+create database escola;
+
+drop table tb_turma;
+create table tb_turma(
+idturma int PRIMARY KEY not null,
+nome varchar(40));
+
+
+drop table tb_aluno;
+create table tb_aluno(
+idaluno int PRIMARY KEY not null,
+  nome varchar(50),
+  idade int,
+  idturma int references tb_turma(id)
+);
+
+drop table tb_professor;
+create table tb_professor(
+idprofessor int PRIMARY KEY not null,
+  nome varchar(50),
+  materia varchar(50),
+  idturma int references tb_turma(id)
+);
+
+insert into tb_turma values
+(0,'DS1'),
+(1,'DS2'),
+(2,'DS3');
+
+insert into tb_aluno values
+(0,'Julia',18, 1),
+(1,'Guilherme',18, 3),
+(2,'Maria',18, 2);
+
+insert into tb_professor values
+(0,'Wagner','BD', 2),
+(1, 'Luciano','PW, 1),
+(2, 'Carlos', 'IP', 3);
+
