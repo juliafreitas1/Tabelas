@@ -1,0 +1,14 @@
+create database escola;
+drop table tb_aluno;
+create table tb_aluno(
+  nome varchar(50),
+  idade int);
+drop table tb_professor;
+create table tb_professor(
+  nome varchar(50),
+  materia varchar(50));
+drop table tb_funcionarios;
+create table tb_funcionarios(  
+  secretaria varchar (50),
+  nome varchar (50));
+  
